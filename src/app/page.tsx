@@ -87,6 +87,24 @@ export default function Home() {
             </div>
           </Link>
 
+          {/* Hash Generator Tool */}
+          <Link href="/hash-generator" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-teal-300 dark:hover:border-teal-600">
+              <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 dark:group-hover:bg-teal-800 transition-colors">
+                <span className="text-2xl">🔐</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                Hash Generator
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Generate hash values from text using various algorithms
+              </p>
+              <div className="mt-4 text-teal-600 dark:text-teal-400 font-medium group-hover:text-teal-700 dark:group-hover:text-teal-300">
+                Use tool →
+              </div>
+            </div>
+          </Link>
+
           {/* Placeholder for future tools */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 opacity-50">
             <div className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
