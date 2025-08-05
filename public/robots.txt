@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://toolzin.vercel.app/sitemap.xml
+Sitemap: https://www.toolzin.site/sitemap.xml
 
 # Disallow crawling of private or admin areas if they exist in the future
 # User-agent: *
