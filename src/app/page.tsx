@@ -105,6 +105,24 @@ export default function Home() {
             </div>
           </Link>
 
+          {/* JWT Decoder Tool */}
+          <Link href="/jwt-decoder" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-amber-300 dark:hover:border-amber-600">
+              <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-amber-200 dark:group-hover:bg-amber-800 transition-colors">
+                <span className="text-2xl">🔍</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                JWT Decoder
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Decode and analyze JWT tokens with detailed explanations
+              </p>
+              <div className="mt-4 text-amber-600 dark:text-amber-400 font-medium group-hover:text-amber-700 dark:group-hover:text-amber-300">
+                Use tool →
+              </div>
+            </div>
+          </Link>
+
           {/* Placeholder for future tools */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 opacity-50">
             <div className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
