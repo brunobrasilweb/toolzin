@@ -40,13 +40,13 @@ export default function Home() {
                 <span className="text-2xl">🆔</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                Gerador de CPF
+                CPF Generator
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Gere CPFs válidos para testes e desenvolvimento
+                Generate valid CPFs for testing and development
               </p>
               <div className="mt-4 text-blue-600 dark:text-blue-400 font-medium group-hover:text-blue-700 dark:group-hover:text-blue-300">
-                Usar ferramenta →
+                Use tool →
               </div>
             </div>
           </Link>
@@ -58,13 +58,13 @@ export default function Home() {
                 <span className="text-2xl">🏢</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                Gerador de CNPJ
+                CNPJ Generator
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Gere CNPJs válidos para testes e desenvolvimento
+                Generate valid CNPJs for testing and development
               </p>
               <div className="mt-4 text-green-600 dark:text-green-400 font-medium group-hover:text-green-700 dark:group-hover:text-green-300">
-                Usar ferramenta →
+                Use tool →
               </div>
             </div>
           </Link>
@@ -75,10 +75,10 @@ export default function Home() {
               <span className="text-2xl">🔜</span>
             </div>
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              Em breve...
+              Coming soon...
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Mais ferramentas úteis estão chegando
+              More useful tools are coming
             </p>
           </div>
 
@@ -87,10 +87,10 @@ export default function Home() {
               <span className="text-2xl">🔜</span>
             </div>
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              Em breve...
+              Coming soon...
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Mais ferramentas úteis estão chegando
+              More useful tools are coming
             </p>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function Home() {
       <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-gray-500 dark:text-gray-400">
-            <p>&copy; 2025 Toolzin. Ferramentas gratuitas para todos.</p>
+            <p>&copy; 2025 Toolzin. Free tools for everyone.</p>
           </div>
         </div>
       </footer>

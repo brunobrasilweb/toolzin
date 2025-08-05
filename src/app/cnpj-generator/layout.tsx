@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gerador de CNPJ - Toolzin",
-  description: "Gere CNPJs válidos para testes e desenvolvimento. Ferramenta gratuita e segura para desenvolvedores.",
+  title: "CNPJ Generator - Toolzin",
+  description: "Generate valid CNPJs for testing and development. Free and secure tool for developers.",
 };
 
 export default function CNPJGeneratorLayout({

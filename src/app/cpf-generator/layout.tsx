@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gerador de CPF - Toolzin",
-  description: "Gere CPFs válidos para testes e desenvolvimento. Ferramenta gratuita e segura.",
+  title: "CPF Generator - Toolzin",
+  description: "Generate valid CPFs for testing and development. Free and secure tool.",
 };
 
 export default function CPFGeneratorLayout({

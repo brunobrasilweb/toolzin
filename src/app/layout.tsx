@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Toolzin - Ferramentas Online Gratuitas",
-  description: "Coleção de ferramentas úteis e gratuitas para o seu dia a dia",
+  title: "Toolzin - Free Online Tools",
+  description: "Collection of useful and free tools for your daily needs",
 };
 
 export default function RootLayout({

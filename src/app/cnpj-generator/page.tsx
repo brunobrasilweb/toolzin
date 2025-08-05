@@ -72,14 +72,14 @@ export default function CNPJGenerator() {
                 🔧 Toolzin
               </h1>
               <span className="ml-2 text-sm text-gray-500 dark:text-gray-400">
-                Ferramentas Online
+                Online Tools
               </span>
             </Link>
             <Link
               href="/"
               className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
-              ← Voltar
+              ← Back
             </Link>
           </div>
         </div>
@@ -93,10 +93,10 @@ export default function CNPJGenerator() {
             <span className="text-3xl">🏢</span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Gerador de CNPJ
+            CNPJ Generator
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Gere CNPJs válidos para testes e desenvolvimento
+            Generate valid CNPJs for testing and development
           </p>
         </div>
 
@@ -107,14 +107,14 @@ export default function CNPJGenerator() {
               onClick={handleGenerate}
               className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 mb-6"
             >
-              Gerar CNPJ
+              Generate CNPJ
             </button>
 
             {cnpj && (
               <div className="space-y-4">
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                   <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                    CNPJ Gerado:
+                    Generated CNPJ:
                   </div>
                   <div className="text-3xl font-mono font-bold text-gray-900 dark:text-white tracking-wider">
                     {cnpj}
@@ -132,12 +132,12 @@ export default function CNPJGenerator() {
                   {copied ? (
                     <>
                       <span className="mr-2">✓</span>
-                      Copiado!
+                      Copied!
                     </>
                   ) : (
                     <>
                       <span className="mr-2">📋</span>
-                      Copiar CNPJ
+                      Copy CNPJ
                     </>
                   )}
                 </button>
@@ -154,17 +154,17 @@ export default function CNPJGenerator() {
             </div>
             <div className="ml-3">
               <h3 className="text-lg font-semibold text-emerald-800 dark:text-emerald-200 mb-2">
-                Sobre o CNPJ e Como Funciona
+                About CNPJ and How It Works
               </h3>
               <div className="text-emerald-700 dark:text-emerald-300 space-y-2">
                 <p>
-                  <strong>O que é CNPJ:</strong> O Cadastro Nacional da Pessoa Jurídica (CNPJ) é um número único que identifica uma pessoa jurídica no Brasil. É emitido pela Receita Federal.
+                  <strong>What is CNPJ:</strong> The National Registry of Legal Entities (CNPJ) is a unique number that identifies a legal entity in Brazil. It is issued by the Federal Revenue.
                 </p>
                 <p>
-                  <strong>Estrutura do CNPJ:</strong> O CNPJ possui 14 dígitos no formato XX.XXX.XXX/XXXX-XX, onde os 8 primeiros identificam a empresa, os 4 seguintes a filial (0001 para matriz) e os 2 últimos são dígitos verificadores.
+                  <strong>CNPJ Structure:</strong> The CNPJ has 14 digits in the format XX.XXX.XXX/XXXX-XX, where the first 8 identify the company, the next 4 the branch (0001 for headquarters) and the last 2 are verification digits.
                 </p>
                 <p>
-                  <strong>Para que usar CNPJs gerados:</strong> Ideal para testes de sistemas, desenvolvimento de software, demonstrações e validação de formulários. Todos seguem o algoritmo oficial de validação.
+                  <strong>How to use generated CNPJs:</strong> Ideal for system testing, software development, demonstrations and form validation. All follow the official validation algorithm.
                 </p>
               </div>
             </div>
@@ -178,24 +178,24 @@ export default function CNPJGenerator() {
             </div>
             <div className="ml-3">
               <h3 className="text-lg font-semibold text-red-800 dark:text-red-200 mb-2">
-                Cuidados e Restrições de Uso
+                Care and Usage Restrictions
               </h3>
               <div className="text-red-700 dark:text-red-300 space-y-2">
                 <ul className="list-disc list-inside space-y-1">
                   <li>
-                    <strong>Nunca use para fins fraudulentos:</strong> É crime usar CNPJ de terceiros ou dados falsos em documentos oficiais.
+                    <strong>Never use for fraudulent purposes:</strong> It is a crime to use third-party CNPJ or false data in official documents.
                   </li>
                   <li>
-                    <strong>Apenas para testes e desenvolvimento:</strong> Use exclusivamente para desenvolvimento, testes de software e demonstrações.
+                    <strong>Only for testing and development:</strong> Use exclusively for development, software testing and demonstrations.
                   </li>
                   <li>
-                    <strong>Não são CNPJs de empresas reais:</strong> Embora sigam o algoritmo de validação, estes CNPJs não pertencem a empresas existentes.
+                    <strong>These are not CNPJs of real companies:</strong> Although they follow the validation algorithm, these CNPJs do not belong to existing companies.
                   </li>
                   <li>
-                    <strong>Proibido uso comercial indevido:</strong> Não utilize estes CNPJs para registro de empresas ou qualquer finalidade oficial.
+                    <strong>Prohibited improper commercial use:</strong> Do not use these CNPJs for company registration or any official purpose.
                   </li>
                   <li>
-                    <strong>Responsabilidade do usuário:</strong> O uso inadequado é de responsabilidade exclusiva do usuário.
+                    <strong>User responsibility:</strong> Inappropriate use is the exclusive responsibility of the user.
                   </li>
                 </ul>
               </div>
@@ -208,7 +208,7 @@ export default function CNPJGenerator() {
       <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-gray-500 dark:text-gray-400">
-            <p>&copy; 2025 Toolzin. Ferramentas gratuitas para todos.</p>
+            <p>&copy; 2025 Toolzin. Free tools for everyone.</p>
           </div>
         </div>
       </footer>
