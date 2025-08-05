@@ -1,0 +1,11 @@
+# Robots.txt file for Toolzin
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://toolzin.vercel.app/sitemap.xml
+
+# Disallow crawling of private or admin areas if they exist in the future
+# User-agent: *
+# Disallow: /admin/
+# Disallow: /private/

@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Toolzin - Online Tools Collection
 
-## Getting Started
+A collection of useful online tools built with Next.js and TailwindCSS.
 
-First, run the development server:
+## 🛠️ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- CPF Generator - Generate valid Brazilian CPFs for testing and development
+- CNPJ Generator - Generate valid Brazilian CNPJs for testing and development
+- Password Generator - Create secure passwords with custom options
+
+## 🚀 Technology Stack
+
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: TailwindCSS 4
+- **Deployment**: Vercel
+- **Analytics**: Google Analytics 4
+
+## 📊 Analytics Setup
+
+This project is configured with Google Analytics 4 (GA4) for tracking visitor interactions with the site. Follow these steps to enable analytics:
+
+1. Create a Google Analytics 4 property in the [Google Analytics console](https://analytics.google.com/)
+2. Get your Measurement ID (starts with G-)
+3. Update the `.env.local` file with your Measurement ID:
+
+```
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The analytics implementation includes:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Page view tracking
+- Event tracking for tool usage
+- Tracking for key user interactions (copying, generating, etc.)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 Analytics Events
 
-## Learn More
+The following events are tracked:
 
-To learn more about Next.js, take a look at the following resources:
+- **Page Views**: All page navigations
+- **Tool Usage**: 
+  - `generate_cpf`: When a CPF is generated
+  - `generate_cnpj`: When a CNPJ is generated
+  - `generate_password`: When a password is generated
+  - `copy`: When content is copied to clipboard
+- **Password Options**: Changes to password generation options
+- **Password Strength**: The strength score of generated passwords
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧪 Local Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Install dependencies
+npm install
 
-## Deploy on Vercel
+# Run development server
+npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Build for production
+npm run build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Start production server
+npm run start
+```
+
+## 🔒 Privacy
+
+- All tools run entirely in the browser
+- No data is sent to any server (except for analytics)
+- No personally identifiable information is collected
+- Analytics can be disabled by removing the GA Measurement ID from the environment variables
+
+## � SEO
+
+This project includes:
+- `sitemap.xml` - Helps search engines discover and index all pages
+- `robots.txt` - Provides crawling instructions for search engine bots
+
+Both files are located in the `/public` directory.
+
+## �📄 License
+
+This project is open source and available under the MIT License.
