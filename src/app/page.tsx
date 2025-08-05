@@ -123,6 +123,24 @@ export default function Home() {
             </div>
           </Link>
 
+          {/* Base64 Tool */}
+          <Link href="/base64-tool" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-indigo-300 dark:hover:border-indigo-600">
+              <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 dark:group-hover:bg-indigo-800 transition-colors">
+                <span className="text-2xl">🔄</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                Base64 Tool
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Encode text to Base64 or decode Base64 to text
+              </p>
+              <div className="mt-4 text-indigo-600 dark:text-indigo-400 font-medium group-hover:text-indigo-700 dark:group-hover:text-indigo-300">
+                Use tool →
+              </div>
+            </div>
+          </Link>
+
           {/* Placeholder for future tools */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 opacity-50">
             <div className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">

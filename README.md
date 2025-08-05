@@ -7,6 +7,9 @@ A collection of useful online tools built with Next.js and TailwindCSS.
 - CPF Generator - Generate valid Brazilian CPFs for testing and development
 - CNPJ Generator - Generate valid Brazilian CNPJs for testing and development
 - Password Generator - Create secure passwords with custom options
+- Hash Generator - Generate hash values from text using various algorithms
+- JWT Decoder - Decode and analyze JWT tokens with detailed explanations
+- Base64 Tool - Encode text to Base64 or decode Base64 to text
 
 ## 🚀 Technology Stack
 
@@ -43,6 +46,10 @@ The following events are tracked:
   - `generate_cpf`: When a CPF is generated
   - `generate_cnpj`: When a CNPJ is generated
   - `generate_password`: When a password is generated
+  - `generate_hash`: When a hash is generated
+  - `decode_jwt`: When a JWT token is decoded
+  - `base64_encode`: When text is encoded to Base64
+  - `base64_decode`: When Base64 is decoded to text
   - `copy`: When content is copied to clipboard
 - **Password Options**: Changes to password generation options
 - **Password Strength**: The strength score of generated passwords
