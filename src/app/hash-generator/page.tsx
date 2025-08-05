@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { trackGeneration, trackCopy } from "@/utils/analytics";
+import Header from "@/components/Header";
+import { ToolIcons } from "@/components/ToolIcons";
 
 // Função para gerar hash de acordo com o algoritmo selecionado
 async function generateHash(text: string, algorithm: string): Promise<string> {
@@ -170,12 +172,12 @@ export default function HashGenerator() {
                 >
                   {copied ? (
                     <>
-                      <span className="mr-2">✓</span>
+                      <ToolIcons.check className="h-4 w-4 mr-2" />
                       Copied!
                     </>
                   ) : (
                     <>
-                      <span className="mr-2">📋</span>
+                      <ToolIcons.copy className="h-4 w-4 mr-2" />
                       Copy Hash
                     </>
                   )}
@@ -189,7 +191,7 @@ export default function HashGenerator() {
         <div className="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-xl p-6 mb-8">
           <div className="flex items-start">
             <div className="flex-shrink-0">
-              <span className="text-2xl">ℹ️</span>
+              <ToolIcons.info className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
             <div className="ml-3">
               <h3 className="text-lg font-semibold text-teal-800 dark:text-teal-200 mb-2">
@@ -210,7 +212,7 @@ export default function HashGenerator() {
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6">
           <div className="flex items-start">
             <div className="flex-shrink-0">
-              <span className="text-2xl">🛡️</span>
+              <ToolIcons.security className="h-6 w-6 text-green-600 dark:text-green-400" />
             </div>
             <div className="ml-3">
               <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-2">

@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { trackGeneration, trackCopy } from "@/utils/analytics";
+import Header from "@/components/Header";
+import { ToolIcons } from "@/components/ToolIcons";
 
 interface JWTPayload {
   [key: string]: any;

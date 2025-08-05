@@ -1,5 +1,15 @@
 import Link from "next/link";
 import Header from "@/components/Header";
+import { 
+  FileSpreadsheet, 
+  Building2, 
+  KeyRound, 
+  Lock, 
+  Search, 
+  RefreshCw, 
+  Youtube, 
+  Clock 
+} from "lucide-react";
 
 export default function Home() {
   return (
@@ -25,7 +35,7 @@ export default function Home() {
           <Link href="/cpf-generator" className="group">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600">
               <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors">
-                <span className="text-2xl">🆔</span>
+                <FileSpreadsheet className="h-6 w-6 text-blue-600 dark:text-blue-400" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 CPF Generator
@@ -43,7 +53,7 @@ export default function Home() {
           <Link href="/cnpj-generator" className="group">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600">
               <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 dark:group-hover:bg-green-800 transition-colors">
-                <span className="text-2xl">🏢</span>
+                <Building2 className="h-6 w-6 text-green-600 dark:text-green-400" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 CNPJ Generator
@@ -61,7 +71,7 @@ export default function Home() {
           <Link href="/password-generator" className="group">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600">
               <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 dark:group-hover:bg-purple-800 transition-colors">
-                <span className="text-2xl">🔒</span>
+                <KeyRound className="h-6 w-6 text-purple-600 dark:text-purple-400" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 Password Generator
@@ -79,7 +89,7 @@ export default function Home() {
           <Link href="/hash-generator" className="group">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-teal-300 dark:hover:border-teal-600">
               <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 dark:group-hover:bg-teal-800 transition-colors">
-                <span className="text-2xl">🔐</span>
+                <Lock className="h-6 w-6 text-teal-600 dark:text-teal-400" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 Hash Generator
@@ -97,7 +107,7 @@ export default function Home() {
           <Link href="/jwt-decoder" className="group">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-amber-300 dark:hover:border-amber-600">
               <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-amber-200 dark:group-hover:bg-amber-800 transition-colors">
-                <span className="text-2xl">🔍</span>
+                <Search className="h-6 w-6 text-amber-600 dark:text-amber-400" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 JWT Decoder
@@ -115,7 +125,7 @@ export default function Home() {
           <Link href="/base64-tool" className="group">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-indigo-300 dark:hover:border-indigo-600">
               <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 dark:group-hover:bg-indigo-800 transition-colors">
-                <span className="text-2xl">🔄</span>
+                <RefreshCw className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 Base64 Tool
@@ -129,10 +139,28 @@ export default function Home() {
             </div>
           </Link>
 
+          {/* YouTube Thumbnail Downloader */}
+          <Link href="/youtube-thumbnail" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-red-300 dark:hover:border-red-600">
+              <div className="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 dark:group-hover:bg-red-800 transition-colors">
+                <Youtube className="h-6 w-6 text-red-600 dark:text-red-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                YouTube Thumbnail
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Download thumbnails from YouTube videos
+              </p>
+              <div className="mt-4 text-red-600 dark:text-red-400 font-medium group-hover:text-red-700 dark:group-hover:text-red-300">
+                Use tool →
+              </div>
+            </div>
+          </Link>
+
           {/* Placeholder for future tools */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 opacity-50">
             <div className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">🔜</span>
+              <Clock className="h-6 w-6 text-gray-600 dark:text-gray-400" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               Coming soon...

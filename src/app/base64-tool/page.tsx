@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { trackGeneration, trackCopy } from "@/utils/analytics";
+import Header from "@/components/Header";
+import { ToolIcons } from "@/components/ToolIcons";
 
 export default function Base64Tool() {
   const [text, setText] = useState<string>("");

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { trackGeneration, trackCopy } from "@/utils/analytics";
+import Header from "@/components/Header";
+import { ToolIcons } from "@/components/ToolIcons";
 
 // Função para gerar CNPJ válido
 function generateCNPJ(): string {
@@ -134,12 +136,12 @@ export default function CNPJGenerator() {
                 >
                   {copied ? (
                     <>
-                      <span className="mr-2">✓</span>
+                      <ToolIcons.check className="h-4 w-4 mr-2" />
                       Copied!
                     </>
                   ) : (
                     <>
-                      <span className="mr-2">📋</span>
+                      <ToolIcons.copy className="h-4 w-4 mr-2" />
                       Copy CNPJ
                     </>
                   )}
@@ -153,7 +155,7 @@ export default function CNPJGenerator() {
         <div className="bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 rounded-xl p-6 mb-8">
           <div className="flex items-start">
             <div className="flex-shrink-0">
-              <span className="text-2xl">ℹ️</span>
+              <ToolIcons.info className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
             <div className="ml-3">
               <h3 className="text-lg font-semibold text-emerald-800 dark:text-emerald-200 mb-2">
@@ -177,7 +179,7 @@ export default function CNPJGenerator() {
         <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-6">
           <div className="flex items-start">
             <div className="flex-shrink-0">
-              <span className="text-2xl">🚫</span>
+              <ToolIcons.ban className="h-6 w-6 text-red-600 dark:text-red-400" />
             </div>
             <div className="ml-3">
               <h3 className="text-lg font-semibold text-red-800 dark:text-red-200 mb-2">

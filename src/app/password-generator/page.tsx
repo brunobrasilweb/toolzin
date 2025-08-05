@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { trackGeneration, trackCopy, trackEvent } from "@/utils/analytics";
+import { ToolIcons } from "@/components/ToolIcons";
 
 interface PasswordOptions {
   length: number;
@@ -337,12 +338,12 @@ export default function PasswordGenerator() {
                     >
                       {copied ? (
                         <>
-                          <span className="mr-2">✓</span>
+                          <ToolIcons.check className="h-4 w-4 mr-2" />
                           Copied!
                         </>
                       ) : (
                         <>
-                          <span className="mr-2">📋</span>
+                          <ToolIcons.copy className="h-4 w-4 mr-2" />
                           Copy Password
                         </>
                       )}
@@ -358,7 +359,7 @@ export default function PasswordGenerator() {
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
           <div className="flex items-start">
             <div className="flex-shrink-0">
-              <span className="text-2xl">💡</span>
+              <ToolIcons.tip className="h-6 w-6 text-yellow-600 dark:text-yellow-400" />
             </div>
             <div className="ml-3">
               <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-2">
@@ -381,7 +382,7 @@ export default function PasswordGenerator() {
         <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-6">
           <div className="flex items-start">
             <div className="flex-shrink-0">
-              <span className="text-2xl">⚠️</span>
+              <ToolIcons.warning className="h-6 w-6 text-orange-600 dark:text-orange-400" />
             </div>
             <div className="ml-3">
               <h3 className="text-lg font-semibold text-amber-800 dark:text-amber-200 mb-2">
