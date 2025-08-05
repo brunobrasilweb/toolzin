@@ -69,19 +69,25 @@ export default function Home() {
             </div>
           </Link>
 
-          {/* Placeholder for future tools */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 opacity-50">
-            <div className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">🔜</span>
+          {/* Password Generator Tool */}
+          <Link href="/password-generator" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600">
+              <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 dark:group-hover:bg-purple-800 transition-colors">
+                <span className="text-2xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                Password Generator
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Generate secure passwords with custom options
+              </p>
+              <div className="mt-4 text-purple-600 dark:text-purple-400 font-medium group-hover:text-purple-700 dark:group-hover:text-purple-300">
+                Use tool →
+              </div>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              Coming soon...
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              More useful tools are coming
-            </p>
-          </div>
+          </Link>
 
+          {/* Placeholder for future tools */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 opacity-50">
             <div className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
               <span className="text-2xl">🔜</span>
