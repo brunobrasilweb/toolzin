@@ -26,6 +26,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Recupera o tema preferido do localStorage
+              const theme = localStorage.getItem('theme');
+              // Verifica se o usuário prefere o tema escuro no sistema
+              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              
+              // Aplica o tema dark se o usuário escolheu dark ou se prefere dark no sistema
+              if (theme === 'dark' || (!theme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+              } else {
+                document.documentElement.classList.remove('dark');
+              }
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
