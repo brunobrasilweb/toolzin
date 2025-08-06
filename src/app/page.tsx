@@ -12,7 +12,8 @@ import {
   Clock,
   Instagram,
   Timer,
-  QrCode
+  QrCode,
+  ImageIcon
 } from "lucide-react";
 
 export default function Home() {
@@ -210,6 +211,24 @@ export default function Home() {
                 Gere QR Codes para pagamentos via PIX
               </p>
               <div className="mt-4 text-cyan-600 dark:text-cyan-400 font-medium group-hover:text-cyan-700 dark:group-hover:text-cyan-300">
+                Use tool →
+              </div>
+            </div>
+          </Link>
+
+          {/* Favicon Generator */}
+          <Link href="/favicon-generator" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-violet-300 dark:hover:border-violet-600">
+              <div className="w-12 h-12 bg-violet-100 dark:bg-violet-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-violet-200 dark:group-hover:bg-violet-800 transition-colors">
+                <ImageIcon className="h-6 w-6 text-violet-600 dark:text-violet-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                Favicon Generator
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Generate high-quality ICO and PNG favicons for web, mobile and desktop
+              </p>
+              <div className="mt-4 text-violet-600 dark:text-violet-400 font-medium group-hover:text-violet-700 dark:group-hover:text-violet-300">
                 Use tool →
               </div>
             </div>

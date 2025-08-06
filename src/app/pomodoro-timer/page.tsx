@@ -116,50 +116,51 @@ export default function PomodoroTimer() {
               if (isMuted) {
                 console.log('Timer completed but notifications are muted');
               }
+            } else if (timerType !== 'pomodoro') {
+              // After break, go back to pomodoro
+              setTimerType('pomodoro');
+              setTimeLeft(POMODORO_TIME);
+              
+              // Show alert and play sound
+              setAlertMessage(`Break completed! Time to focus again.`);
+              setShowAlert(true);
+              // Start repeating sound notification
+              startRepeatingSound();
             }
             
-            // Increment pomodoro count
-            setPomodoroCount(prev => {
-              const newCount = prev + 1;
-              // After 4 pomodoros, suggest a long break
-              if (newCount % 4 === 0) {
-                setTimerType('longBreak');
-                setTimeLeft(LONG_BREAK_TIME);
-              } else {
-                setTimerType('shortBreak');
-                setTimeLeft(SHORT_BREAK_TIME);
-              }
-              return newCount;
-            });
-          } else {
-            // After break, go back to pomodoro
-            setTimerType('pomodoro');
-            setTimeLeft(POMODORO_TIME);
+            // Increment pomodoro count and set next timer type
+            if (timerType === 'pomodoro') {
+              setPomodoroCount(prev => {
+                const newCount = prev + 1;
+                // After 4 pomodoros, suggest a long break
+                if (newCount % 4 === 0) {
+                  setTimerType('longBreak');
+                  setTimeLeft(LONG_BREAK_TIME);
+                } else {
+                  setTimerType('shortBreak');
+                  setTimeLeft(SHORT_BREAK_TIME);
+                }
+                return newCount;
+              });
+            }
             
-            // Show alert and play sound
-            setAlertMessage(`Break completed! Time to focus again.`);
-            setShowAlert(true);
-            // Start repeating sound notification
-            startRepeatingSound();
+            setIsTimerRunning(false);
+            return 0;
           }
-          
-          setIsTimerRunning(false);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-  } else if (timerRef.current) {
-    clearInterval(timerRef.current);
-    timerRef.current = null;
-  }
-  
-  return () => {
-    if (timerRef.current) {
+          return prev - 1;
+        });
+      }, 1000);
+    } else if (timerRef.current) {
       clearInterval(timerRef.current);
+      timerRef.current = null;
     }
-  };
-}, [isTimerRunning, timerType, selectedTaskId, tasks]);
+    
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [isTimerRunning, timerType, selectedTaskId, tasks]);
 
 // Update chart when statistics tab is shown
 useEffect(() => {
@@ -169,7 +170,6 @@ useEffect(() => {
       updateChart();
     }, 0);
   }
-};
 }, [showStats]);
 
 // Cleanup notification sounds when component unmounts
