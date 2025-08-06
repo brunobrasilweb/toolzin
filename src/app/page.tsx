@@ -10,7 +10,8 @@ import {
   RefreshCw, 
   Youtube, 
   Clock,
-  Instagram
+  Instagram,
+  Timer
 } from "lucide-react";
 
 export default function Home() {
@@ -177,18 +178,23 @@ export default function Home() {
             </div>
           </Link>
 
-          {/* Placeholder for future tools */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 opacity-50">
-            <div className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
-              <Clock className="h-6 w-6 text-gray-600 dark:text-gray-400" />
+          {/* Pomodoro Timer */}
+          <Link href="/pomodoro-timer" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-600">
+              <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-200 dark:group-hover:bg-orange-800 transition-colors">
+                <Timer className="h-6 w-6 text-orange-600 dark:text-orange-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                Pomodoro Timer
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Track your tasks and productivity with a customizable Pomodoro timer
+              </p>
+              <div className="mt-4 text-orange-600 dark:text-orange-400 font-medium group-hover:text-orange-700 dark:group-hover:text-orange-300">
+                Use tool →
+              </div>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              Coming soon...
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              More useful tools are coming
-            </p>
-          </div>
+          </Link>
         </div>
       </main>
 
