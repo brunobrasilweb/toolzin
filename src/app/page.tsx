@@ -11,7 +11,8 @@ import {
   Youtube, 
   Clock,
   Instagram,
-  Timer
+  Timer,
+  QrCode
 } from "lucide-react";
 
 export default function Home() {
@@ -191,6 +192,24 @@ export default function Home() {
                 Track your tasks and productivity with a customizable Pomodoro timer
               </p>
               <div className="mt-4 text-orange-600 dark:text-orange-400 font-medium group-hover:text-orange-700 dark:group-hover:text-orange-300">
+                Use tool →
+              </div>
+            </div>
+          </Link>
+
+          {/* PIX QR Code Generator */}
+          <Link href="/pix-qrcode" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-cyan-300 dark:hover:border-cyan-600">
+              <div className="w-12 h-12 bg-cyan-100 dark:bg-cyan-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-200 dark:group-hover:bg-cyan-800 transition-colors">
+                <QrCode className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                PIX QR Code
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Gere QR Codes para pagamentos via PIX
+              </p>
+              <div className="mt-4 text-cyan-600 dark:text-cyan-400 font-medium group-hover:text-cyan-700 dark:group-hover:text-cyan-300">
                 Use tool →
               </div>
             </div>
