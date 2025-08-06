@@ -15,7 +15,8 @@ import {
   Info,
   ShieldAlert,
   BanIcon,
-  Lightbulb
+  Lightbulb,
+  Instagram
 } from "lucide-react";
 
 export const ToolIcons = {
@@ -27,6 +28,7 @@ export const ToolIcons = {
   jwt: Search,
   base64: RefreshCw,
   youtube: Youtube,
+  instagram: Instagram,
   comingSoon: Clock,
   
   // Ícones para botões e alertas

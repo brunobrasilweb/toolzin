@@ -8,7 +8,8 @@ import {
   Search, 
   RefreshCw, 
   Youtube, 
-  Clock 
+  Clock,
+  Instagram
 } from "lucide-react";
 
 export default function Home() {
@@ -152,6 +153,24 @@ export default function Home() {
                 Download thumbnails from YouTube videos
               </p>
               <div className="mt-4 text-red-600 dark:text-red-400 font-medium group-hover:text-red-700 dark:group-hover:text-red-300">
+                Use tool →
+              </div>
+            </div>
+          </Link>
+
+          {/* Instagram Image Downloader */}
+          <Link href="/instagram-image" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-600">
+              <div className="w-12 h-12 bg-pink-100 dark:bg-pink-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-pink-200 dark:group-hover:bg-pink-800 transition-colors">
+                <Instagram className="h-6 w-6 text-pink-600 dark:text-pink-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                Instagram Image
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Download images from Instagram posts
+              </p>
+              <div className="mt-4 text-pink-600 dark:text-pink-400 font-medium group-hover:text-pink-700 dark:group-hover:text-pink-300">
                 Use tool →
               </div>
             </div>
