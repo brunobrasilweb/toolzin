@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { Suspense } from "react";
 import "./globals.css";
 
@@ -25,21 +26,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Recupera o tema preferido do localStorage
-              const theme = localStorage.getItem('theme');
-              // Verifica se o usuário prefere o tema escuro no sistema
-              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-              
-              // Aplica o tema dark se o usuário escolheu dark ou se prefere dark no sistema
-              if (theme === 'dark' || (!theme && prefersDark)) {
-                document.documentElement.classList.add('dark');
-              } else {
-                document.documentElement.classList.remove('dark');
+              try {
+                // Recupera o tema preferido do localStorage
+                const theme = localStorage.getItem('theme');
+                // Verifica se o usuário prefere o tema escuro no sistema
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                
+                // Aplica o tema dark se o usuário escolheu dark ou se prefere dark no sistema
+                if (theme === 'dark' || (!theme && prefersDark)) {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              } catch (e) {
+                console.error('Error applying theme:', e);
               }
             `,
           }}
@@ -48,12 +53,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-          <Suspense fallback={null}>
-            <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
-          </Suspense>
-        )}
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+            <Suspense fallback={null}>
+              <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+            </Suspense>
+          )}
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { trackGeneration, trackCopy } from "@/utils/analytics";
+import Header from "@/components/Header";
+import { ToolIcons } from "@/components/ToolIcons";
 
 export default function YoutubeThumbnail() {
   const [url, setUrl] = useState<string>("");
@@ -106,27 +108,21 @@ export default function YoutubeThumbnail() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Navigation */}
-        <div className="mb-8">
-          <Link 
-            href="/"
-            className="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 flex items-center"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
-            </svg>
-            Back to Tools
-          </Link>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800">
+      {/* Header */}
+      <Header showBackButton={true} />
 
-        {/* Header */}
-        <div className="text-center mb-10">
-          <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+      {/* Main Content */}
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Page Header */}
+        <div className="text-center mb-12">
+          <div className="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-3xl">🎬</span>
+          </div>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             YouTube Thumbnail Downloader
           </h1>
-          <p className="mt-3 max-w-md mx-auto text-base text-gray-600 dark:text-gray-300 sm:text-lg">
+          <p className="text-xl text-gray-600 dark:text-gray-300">
             Download high-quality thumbnails from YouTube videos
           </p>
         </div>
@@ -225,22 +221,36 @@ export default function YoutubeThumbnail() {
         )}
 
         {/* How it works */}
-        <div className="mt-12 bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
-          <div className="p-6">
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-              How to use this tool
-            </h2>
-            <ol className="list-decimal pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-              <li>Paste any YouTube video URL in the input field above</li>
-              <li>Click on "Get Thumbnails" to fetch all available thumbnail qualities</li>
-              <li>Preview the thumbnails and click "Download" to save your preferred version</li>
-            </ol>
-            <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/30 rounded-md text-sm text-yellow-800 dark:text-yellow-200">
-              <p><strong>Note:</strong> Not all thumbnail qualities are available for every video. The maximum resolution thumbnail might not be available for older videos.</p>
+        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-6">
+          <div className="flex items-start">
+            <div className="flex-shrink-0">
+              <ToolIcons.info className="h-6 w-6 text-red-600 dark:text-red-400" />
+            </div>
+            <div className="ml-3">
+              <h3 className="text-lg font-semibold text-red-800 dark:text-red-200 mb-2">
+                How to use this tool
+              </h3>
+              <div className="text-red-700 dark:text-red-300 space-y-2">
+                <ol className="list-decimal pl-5 space-y-2">
+                  <li>Paste any YouTube video URL in the input field above</li>
+                  <li>Click on "Get Thumbnails" to fetch all available thumbnail qualities</li>
+                  <li>Preview the thumbnails and click "Download" to save your preferred version</li>
+                </ol>
+                <p className="mt-2"><strong>Note:</strong> Not all thumbnail qualities are available for every video. The maximum resolution thumbnail might not be available for older videos.</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center text-gray-500 dark:text-gray-400">
+            <p>&copy; 2025 Toolzin. Free tools for everyone.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

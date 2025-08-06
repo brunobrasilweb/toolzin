@@ -62,33 +62,29 @@ export default function Base64Tool() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        {/* Navigation */}
-        <div className="mb-8">
-          <Link 
-            href="/"
-            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 flex items-center"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
-            </svg>
-            Back to Tools
-          </Link>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-100 dark:from-gray-900 dark:to-gray-800">
+      {/* Header */}
+      <Header showBackButton={true} />
 
-        {/* Header */}
-        <div className="text-center mb-10">
-          <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+      {/* Main Content */}
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Page Header */}
+        <div className="text-center mb-12">
+          <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-3xl">🔄</span>
+          </div>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Base64 Encoder / Decoder
           </h1>
-          <p className="mt-3 max-w-md mx-auto text-base text-gray-600 dark:text-gray-300 sm:text-lg">
+          <p className="text-xl text-gray-600 dark:text-gray-300">
             Easily encode text to Base64 or decode Base64 to text
           </p>
         </div>
 
-        {/* Mode Toggle */}
-        <div className="flex justify-center mb-6">
+        {/* Generator Tool */}
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 mb-8">
+          {/* Mode Toggle */}
+          <div className="flex justify-center mb-6">
           <div className="inline-flex rounded-md shadow-sm" role="group">
             <button
               type="button"
@@ -188,26 +184,42 @@ export default function Base64Tool() {
             </div>
           </div>
         )}
+        </div>
 
         {/* Information Box */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-5 border border-gray-200 dark:border-gray-700">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">About Base64</h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-3">
-            Base64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format by translating
-            it into a radix-64 representation. It's commonly used when there is a need to encode binary data in environments
-            that only support text, such as:
-          </p>
-          <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-3">
-            <li>Embedding binary data in XML or JSON</li>
-            <li>Transferring data in email attachments</li>
-            <li>Storing complex data in URLs</li>
-            <li>Encoding images and other binary files for web display</li>
-          </ul>
-          <p className="text-gray-600 dark:text-gray-300">
-            This tool helps you encode text to Base64 format and decode Base64 back to plain text, supporting UTF-8 character encoding.
-          </p>
+        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+          <div className="flex items-start">
+            <div className="flex-shrink-0">
+              <ToolIcons.info className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+            </div>
+            <div className="ml-3">
+              <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-2">
+                About Base64
+              </h3>
+              <div className="text-blue-700 dark:text-blue-300 space-y-2">
+                <p>
+                  Base64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format by translating
+                  it into a radix-64 representation.
+                </p>
+                <p>
+                  It's commonly used when there is a need to encode binary data in environments
+                  that only support text, such as embedding binary data in XML or JSON, transferring data in email attachments,
+                  storing complex data in URLs, and encoding images for web display.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center text-gray-500 dark:text-gray-400">
+            <p>&copy; 2025 Toolzin. Free tools for everyone.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
