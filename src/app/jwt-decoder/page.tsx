@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { trackGeneration, trackCopy } from "@/utils/analytics";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { ToolIcons } from "@/components/ToolIcons";
 
 interface JWTPayload {
@@ -120,44 +121,21 @@ export default function JWTDecoder() {
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Page Header */}
+        <div className="text-center mb-12">
+          <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-3xl">🔐</span>
+          </div>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            JWT Decoder
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300">
+            Decode and inspect JSON Web Tokens
+          </p>
+        </div>
+        
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-8">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">JWT Decoder</h2>
-          
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-md p-4 mb-6">
-            <h3 className="text-md font-medium text-blue-800 dark:text-blue-300 mb-2">About JSON Web Tokens (JWT)</h3>
-            <p className="text-sm text-blue-700 dark:text-blue-400">
-              JWT is an open standard (RFC 7519) for securely transmitting information between parties as a JSON object. 
-              JWTs consist of three parts: Header (algorithm & token type), Payload (data), and Signature (verification).
-              This tool helps you decode and inspect the contents of any JWT token.
-            </p>
-            
-            <div className="mt-4 prose prose-sm prose-indigo dark:prose-invert max-w-none">
-              <h4 className="text-blue-800 dark:text-blue-300">JWT Structure</h4>
-              <p className="text-sm text-blue-700 dark:text-blue-400">
-                JWTs consist of three parts separated by dots (.): Header, Payload, and Signature.
-              </p>
-              <pre className="bg-blue-100 dark:bg-blue-800/50 p-2 rounded text-xs text-blue-800 dark:text-blue-300">header.payload.signature</pre>
-              
-              <h5 className="text-blue-800 dark:text-blue-300">1. Header</h5>
-              <p className="text-sm text-blue-700 dark:text-blue-400">
-                The header typically consists of two parts: the type of the token (JWT) and the signing algorithm being used, such as HMAC SHA256 or RSA.
-              </p>
-              
-              <h5 className="text-blue-800 dark:text-blue-300">2. Payload</h5>
-              <p className="text-sm text-blue-700 dark:text-blue-400">
-                The payload contains the claims. Claims are statements about an entity (typically, the user) and additional data. Common claims include:
-                <code className="text-xs bg-blue-100 dark:bg-blue-800/50 p-1 rounded">iss</code> (Issuer),
-                <code className="text-xs bg-blue-100 dark:bg-blue-800/50 p-1 rounded">sub</code> (Subject),
-                <code className="text-xs bg-blue-100 dark:bg-blue-800/50 p-1 rounded">exp</code> (Expiration Time),
-                <code className="text-xs bg-blue-100 dark:bg-blue-800/50 p-1 rounded">iat</code> (Issued At).
-              </p>
-              
-              <h5 className="text-blue-800 dark:text-blue-300">3. Signature</h5>
-              <p className="text-sm text-blue-700 dark:text-blue-400">
-                The signature is created by signing the encoded header and payload using a secret key. It verifies the message wasn't changed and, in some cases, verifies the sender's identity.
-              </p>
-            </div>
-          </div>
           
           {/* Input Area */}
           <div className="mb-6">
@@ -384,16 +362,46 @@ export default function JWTDecoder() {
             </div>
           )}
         </div>
+
+        {/* Information Box */}
+        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+          <div className="flex items-start">
+            <div className="flex-shrink-0">
+              <ToolIcons.info className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+            </div>
+            <div className="ml-3">
+              <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-2">
+                About JSON Web Tokens (JWT)
+              </h3>
+              <div className="text-blue-700 dark:text-blue-300 space-y-2">
+                <p>
+                  JWT is an open standard (RFC 7519) for securely transmitting information between parties as a JSON object. 
+                  JWTs consist of three parts: Header (algorithm & token type), Payload (data), and Signature (verification).
+                </p>
+                <p>
+                  JWT Structure: <code className="bg-blue-100 dark:bg-blue-800/50 p-1 rounded text-xs">header.payload.signature</code>
+                </p>
+                <p>
+                  <strong>Header:</strong> Contains the type of token (JWT) and the signing algorithm (e.g., HMAC SHA256 or RSA).
+                </p>
+                <p>
+                  <strong>Payload:</strong> Contains claims (statements about an entity and data). Common claims include:
+                  <code className="text-xs bg-blue-100 dark:bg-blue-800/50 p-1 rounded mx-1">iss</code> (Issuer),
+                  <code className="text-xs bg-blue-100 dark:bg-blue-800/50 p-1 rounded mx-1">sub</code> (Subject),
+                  <code className="text-xs bg-blue-100 dark:bg-blue-800/50 p-1 rounded mx-1">exp</code> (Expiration Time),
+                  <code className="text-xs bg-blue-100 dark:bg-blue-800/50 p-1 rounded mx-1">iat</code> (Issued At).
+                </p>
+                <p>
+                  <strong>Signature:</strong> Created by signing the encoded header and payload using a secret key. It verifies that the message wasn't changed and, in some cases, verifies the sender's identity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
       {/* Footer */}
-      <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center text-gray-500 dark:text-gray-400">
-            <p>&copy; 2025 Toolzin. Free tools for everyone.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

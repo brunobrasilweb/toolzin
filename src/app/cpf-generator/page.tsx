@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { trackGeneration, trackCopy } from "@/utils/analytics";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { ToolIcons } from "@/components/ToolIcons";
 
 // Função para gerar CPF válido
@@ -180,13 +181,7 @@ export default function CPFGenerator() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center text-gray-500 dark:text-gray-400">
-            <p>&copy; 2025 Toolzin. Free tools for everyone.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
