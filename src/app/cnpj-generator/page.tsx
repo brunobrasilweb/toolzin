@@ -77,7 +77,7 @@ export default function CNPJGenerator() {
         {/* Page Header */}
         <div className="text-center mb-12">
           <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span className="text-3xl">🏢</span>
+            <ToolIcons.cnpj className="h-8 w-8 text-green-600 dark:text-green-400" />
           </div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             CNPJ Generator

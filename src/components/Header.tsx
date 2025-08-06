@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
 
 type HeaderProps = {
@@ -13,12 +14,22 @@ export default function Header({ showBackButton = false }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-              🔧 Toolzin
-            </h1>
-            <span className="ml-2 text-sm text-gray-500 dark:text-gray-400">
-              Online Tools
-            </span>
+            {/* Logo para tema claro */}
+            <Image
+              src="/logo.png"
+              alt="Toolzin"
+              width={120}
+              height={40}
+              className="block dark:hidden"
+            />
+            {/* Logo para tema escuro */}
+            <Image
+              src="/logo-dark.png"
+              alt="Toolzin"
+              width={120}
+              height={40}
+              className="hidden dark:block"
+            />
           </Link>
           <div className="flex items-center space-x-4">
             {showBackButton && (

@@ -72,7 +72,7 @@ export default function Base64Tool() {
         {/* Page Header */}
         <div className="text-center mb-12">
           <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span className="text-3xl">🔄</span>
+            <ToolIcons.base64 className="h-8 w-8 text-indigo-600 dark:text-indigo-400" />
           </div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Base64 Encoder / Decoder

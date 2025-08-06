@@ -138,7 +138,7 @@ export default function PasswordGenerator() {
         {/* Page Header */}
         <div className="text-center mb-12">
           <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span className="text-3xl">🔒</span>
+            <ToolIcons.password className="h-8 w-8 text-purple-600 dark:text-purple-400" />
           </div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Password Generator

@@ -16,7 +16,9 @@ import {
   ShieldAlert,
   BanIcon,
   Lightbulb,
-  Instagram
+  Instagram,
+  Timer,
+  QrCode
 } from "lucide-react";
 
 export const ToolIcons = {
@@ -29,6 +31,8 @@ export const ToolIcons = {
   base64: RefreshCw,
   youtube: Youtube,
   instagram: Instagram,
+  timer: Timer,
+  qrcode: QrCode,
   comingSoon: Clock,
   
   // Ícones para botões e alertas
